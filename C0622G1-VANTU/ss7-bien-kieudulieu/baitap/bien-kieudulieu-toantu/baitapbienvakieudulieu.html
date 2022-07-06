@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<!--nhập điểm của một sinh viên cho các môn: Vật lý, Hóa học, và Sinh học. Sau đó hiển thị điểm trung bình và tổng-->
+<script>
+    inputPhysics = prompt("Enter the Physics");
+    inputChemistry = prompt("Enter the Chemistry");
+    inputBilogical = prompt("Enter the Biological");
+    let Physics = parseInt(inputPhysics);
+    let Chemistry = parseInt(inputChemistry);
+    let Biological = parseInt(inputBilogical);
+    let Sum = Physics+Chemistry+Biological;
+    let Medium = Sum/3;
+    document.write("The Sum is: " + Sum);
+    document.write("The Medium " + Medium);
+</script>
+<!--tính diện tích hình tròn-->
+<script>
+    inputR = prompt("nhập giá trị R");
+    let R = parseInt(inputR);
+    let S = R*R * 3.14;
+    document.write("Diện tích hình tròn " + S);
+</script>
+<!--tính chu vi hình tròn-->
+<script>
+    inputR = prompt("nhập giá trị r");
+    let R = parseInt(inputR);
+    let C = R*2 * 3.14;
+    document.write("Chu vi hình tròn" + C);
+</script>
+<!--nhập một giá trị là độ 0C (Celsius) và chuyển nó sang độ 0F (Fahrenheit)-->
+<script>
+    inputSerius = prompt("Nhập độ C");
+    let Serius = parseInt(inputSerius);
+    let Fahrenheit = Serius*9/5+32;
+    document.write("kết quả chuyển đổi: "+ Fahrenheit);
+</script>
+</body>
+</html>
