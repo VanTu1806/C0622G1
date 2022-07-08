@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    let diembaikiemtra = parseInt(prompt("Nhap diem bai kiem tra"))
+    let diemgiuaky = parseInt(prompt("Nhap diem bai kiem tra giua ky"))
+    let diemcuoiky = parseInt(prompt("Nhap diem bai kiem tra cuoi ky"))
+    let tongdiem = ((diembaikiemtra+diemcuoiky+diemgiuaky)/3)
+    if (tongdiem >=8){
+        alert("Hoc sinh gioi");
+    } else {
+        if (tongdiem >=5) {
+            alert("Hoc sinh kha");
+        } else {
+            alert('Hoc sinh dot');
+        }
+    }
+
+</script>
+</body>
+</html>
