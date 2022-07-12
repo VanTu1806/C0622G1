@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hiển thị nhiệt độ</title>
+</head>
+<body>
+<script>
+    do {
+        let nhietDo = parseFloat(prompt('Nhập giá trị nhiệt độ'));
+        if (nhietDo > 100) {
+            alert('Yêu cầu giảm nhiệt độ');
+        } else if (nhietDo < 20) {
+            alert('Yêu cầu tăng nhiệt độ');
+        } else {
+            alert('Nhiệt độ đang trong khoản cho phép');
+        }
+    } while (true);
+</script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    let numberDau = +prompt('Nhập vào giá trị min trong khoảng bạn muốn đoán');
+    let numberCuoi = +prompt("Nhập vào giá trị max trong khoảng bạn muốn đoán");
+    let numberRan2 = Math.floor(Math.random() * (numberCuoi - numberDau)) + numberDau;
+    console.log(numberRan2);
+    let numberCheck = +prompt("Nhập số bạn đoán");
+    let count = 0;
+    while (numberCheck !== numberRan2) {
+        count++;
+        if (count == 4) {
+            alert("Bạn hết số lần đoán");
+            break;
+        } else if (numberCheck < numberRan2) {
+            alert("Số bạn đoán bé hơn");
+        } else {
+            alert("Số bạn đoán lớn hơn");
+        }
+        numberCheck = +prompt("Nhập số bạn đoán");
+    }
+    if (count == 4) {
+        document.write("Bạn hết số lần đoán");
+    } else {
+        document.write("Bạn đã đoán đúng số. Chúc mừng bạn!");
+    }
+</script>
+</body>
+</html>

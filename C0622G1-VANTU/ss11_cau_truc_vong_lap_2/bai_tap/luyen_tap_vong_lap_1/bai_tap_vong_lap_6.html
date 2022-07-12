@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    let i;
+    let so = 0;
+    let tong = 0;
+    document.write('Tổng của 30 số đầu tiên chia hết cho 7 trong các số tự nhiên.<br><br>');
+    for (i = 1; i <= 29; i = i + 1) {
+        document.write(so + ' + ');
+        so = so + 7;
+        tong = tong + so;
+    }
+    document.write(so + ' = ' + tong);
+</script>
+</body>
+</html>
