@@ -7,12 +7,12 @@
 <body>
 <script>
     let tienGui = prompt('Nhập số tiền bạn gửi vào đây (trĐ)\n' +
-        'Lãi suất hàng tháng là 5%');
+        'Lãi suất hàng tháng là 8%');
     tienGui = parseFloat(tienGui);
     let n = prompt('Số tháng bạn muốn gửi');
 
     for (let i = 0; i < n; i++) {
-        tienGui = tienGui + tienGui / 100 * 5;
+        tienGui = tienGui + (tienGui / 100 * 8);
     }
     alert('Số tiền bạn nhận được sau ' + n + ' tháng là ' + tienGui.toFixed(3) + 'trĐ');
 </script>

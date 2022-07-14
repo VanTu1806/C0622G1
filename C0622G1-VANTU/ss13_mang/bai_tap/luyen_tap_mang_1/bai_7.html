@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    let a = [1, 2, 3, 4, 5, 6, 75, 42]
+    let b = +prompt();
+    let c= [];
+    if (a.includes(b)===true) {
+        document.write("v is in the array")
+        c= a.indexOf(b)
+        a.splice(c,1)
+        document.write(a.toString())
+    } else {
+        document.write("Not")
+    }
+</script>
+</body>
+</html>

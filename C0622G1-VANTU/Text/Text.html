@@ -2,9 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title></title>
 </head>
 <body>
-$END$
+<script>
+    let a = [1, 2, 3, 5, 6, 7, 23, 4, 8, 11];
+    let b = [];
+    let c = []
+    for (i = 0; i < 10; i++) {
+        b[i] = a[i]
+        for (j = 0; j < 10; j++) {
+            c[j] = a[j]
+            if (b[i] > c[j]) {
+                b[i] = c[j]
+            }
+        }
+    }
+    document.write(a)
+</script>
 </body>
 </html>
