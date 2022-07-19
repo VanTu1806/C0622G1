@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    class Rectangle {
+        constructor(long, width) {
+            this.long = long;
+            this.width = width;
+        }
+
+        setLong(long) {
+            this.long = long;
+        }
+
+        setWidth(width) {
+            this.width = width;
+        }
+
+        getLong() {
+            return this.long
+        }
+
+        getWidth() {
+            return this.width
+        }
+
+        getP() {
+            return (this.long + this.width) * 2;
+        }
+
+        getS() {
+            return this.long * this.width
+        }
+    }
+
+    let rectangle = new Rectangle(20, 10);
+    let rectangle2 = new Rectangle();
+    rectangle2.setWidth(400);
+    rectangle2.setLong(600);
+    rectangle.getLong();
+    rectangle.getWidth();
+    document.write(rectangle.getP() + "<br>");
+    document.write(rectangle.getS() + "<br>");
+    document.write(rectangle2.getS() + "<br>");
+    document.write(rectangle2.getP())
+</script>
+</body>
+</html>
