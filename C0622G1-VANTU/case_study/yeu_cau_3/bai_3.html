@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 3: Cho một danh sách các phân số, hãy tìm chỉ số của phân số lớn nhất (đếm từ 0)
+        Giả định rằng không có các phân số bằng nhau trong tập đầu vào
+        Ví dụ: numerators = [5, 2, 5] và denominators = [6, 3, 4], thì kết quả maxFraction(numerators, denominators) = 2.
+        ⇨	5/4 là phân số lớn nhất, có chỉ số là 2
+    </title>
+</head>
+<body>
+<script>
+    let arrA = [5,2,5];
+    let arrB = [6,3,4];
+    let arrC = arrA[0]/arrB[0];
+    let max = 0;
+    for (i = 0; i < arrB.length; i++) {
+        if((arrA[i] / arrB[i])> arrC ) {
+            arrC = arrA[i] / arrB[i]
+            max = i
+        }
+    }
+    document.write("so lon nhat la " + arrC + "<br>")
+    document.write(" o tai vi tri thu " + max);
+
+</script>
+</body>
+</html>

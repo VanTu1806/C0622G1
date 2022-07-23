@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2: Viết chương trình kiểm tra một ký tự trong bảng chữ cái tiếng anh là nguyên âm hay phụ âm.
+        Ký tự là bất kỳ được nhập từ bàn phím.
+        Các ký tự nguyên âm bao gồm: 'o', 'u', 'i', 'a', 'e' hoặc 'O', 'U', 'I', 'A', 'E'</title>
+</head>
+<body>
+<script>
+    let chucai = prompt("nhap chu cai can kiem tra");
+    let nguyenam = ['o', 'u', 'i', 'a', 'e', 'O', 'U', 'I', 'A', 'E'];
+    let mang = [];
+    for (let i = 0; i < nguyenam.length; i++) {
+        if (chucai === nguyenam[i]) {
+            document.write("chu cai do la nguyen am")
+            mang.push(nguyenam[i])
+            break;
+        }
+    }
+    if (mang === 0) {
+        document.write("chu cai do la phu am")
+    }
+</script>
+</body>
+</html>

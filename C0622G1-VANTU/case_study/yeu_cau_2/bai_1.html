@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 1: Viết một chương trình để nhập lương nhân viên, tính thuế thu nhập và lương ròng :
+        20% thuế thu nhập nếu lương là 15 triệu.
+        10% thuế thu nhập nếu lương từ 7 đến 15 triệu.
+        5% thuế thu nhập nếu lương dưới 7 triệu
+    </title>
+</head>
+<body>
+<script>
+    let luong = +prompt("nhap luong nhan vien");
+    let thue = 0;
+    if (luong > 15) {
+        thue = luong * 0.2;
+        luong = luong - thue;
+    } else {
+        if (luong > 7) {
+            thue = luong * 0.1;
+            luong = luong - thue;
+        } else {
+            thue = luong * 0.07;
+            luong = luong - thue;
+        }
+    }
+    document.write("So tien thue phai dong la " + thue + "<br>");
+    document.write("so tien luong nhan duoc la " + luong)
+</script>
+</body>
+</html>

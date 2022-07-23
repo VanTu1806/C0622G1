@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vẽ hình chữ nhật rỗng chiều dài n và chiều rộng m theo hình dưới đây.
+        Ví dụ: x = 4, y = 5
+    </title>
+</head>
+<body>
+<script>
+    let canhDai = '';
+    let canhRong = '';
+    for (let i = 1; i <= 5; i++) {
+        canhDai += '*';
+        if (i === 1 || i === 5) {
+            canhRong += '*';
+        } else {
+            canhRong += '&nbsp&nbsp';
+        }
+    }
+    for (let j = 1; j <= 4; j++) {
+        if (j === 1 || j === 4) {
+            document.write(canhDai);
+        } else {
+            document.write(canhRong);
+        }
+        document.write("<br/>");
+    }
+</script>
+</body>
+</html>
