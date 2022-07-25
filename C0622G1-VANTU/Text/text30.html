@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>viet ham co tham so</title>
+</head>
+<body>
+<script>
+    let str = prompt('Nhập một xâu ký tự từ bàn phím');
+    document.write('Xâu nhập vào: ' + str + '<br>');
+    document.write('Xâu định dạng: ' + dinhDang(str) + '<br>');
+
+    //định dạng chuỗi
+    function dinhDang(strInput) {
+        let arrInput = strInput.split(" ");x
+        let strOutput = '';
+        if (arrInput.length === 1) {
+            return strInput
+        } else {
+            for (let i = 0; i < arrInput.length; i++) {
+                strOutput += arrInput[i][0].toUpperCase();
+            }
+            return strOutput;
+        }
+    }
+</script>
+</body>
+</html>

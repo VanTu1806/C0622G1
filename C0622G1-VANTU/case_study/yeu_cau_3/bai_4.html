@@ -7,15 +7,15 @@
 </head>
 <body>
 <script>
-    let numberA = +prompt("nhap so tu ban phim");
-    let numberB = [1,2,3,4];
-    let numberC = ['mot','hai','ba','bon'];
-    if (numberA = numberB[i]) {
-        numberB[i]=numberC[i]
-    }document.write(numberC)
+    let arr = ["Không","Một","Hai","Ba","Bốn","Năm","Sáu","Bảy","Tám","Chín"]
+    let arr2 = ["0","1","2","3","4","5","6","7","8","9"];
+    let str = prompt("Nhập số vào đây");
+    let arr3 = [];
 
-
-
+    for (let i = 0; i < str.length; i++) {
+        arr3.push(arr[arr2.indexOf(str[i])]);
+    }
+    document.write(arr3);
 </script>
 </body>
 </html>

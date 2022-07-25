@@ -6,19 +6,110 @@
 </head>
 <body>
 <script>
-    let a = [1, 2, 3, 5, 6, 7, 23, 4, 8, 11];
-    let b = [];
-    let c = []
-    for (i = 0; i < 10; i++) {
-        b[i] = a[i]
-        for (j = 0; j < 10; j++) {
-            c[j] = a[j]
-            if (b[i] > c[j]) {
-                b[i] = c[j]
+    class Apple {
+        constructor() {
+            this.weight = 10;
+        }
+
+        getWeight() {
+            return this.weight;
+        }
+
+        decrease() {
+            this.weight--;
+        }
+
+        isEmpty() {
+            if (this.weight == 0) {
+                return true;
+            }
+            return false;
+        }
+
+    }
+
+    class Human {
+        constructor(name, gender, weight) {
+            this.name = name;
+            this.gender = gender;
+            this.weight = weight;
+        }
+
+        isMale() {
+            if (this.gender == "NAM") {
+                return true;
+            } else {
+                return false;
             }
         }
+
+        setGender(gender) {
+            this.gender = gender;
+        }
+
+        say(text) {
+            console.log(this.name + " :" + text);
+        }
+
+        checkApple(apple) {
+            if (!apple.isEmpty()) {
+                return true;
+            } else {
+                console.log(this.name + " : táo đã hết")
+                return false;
+            }
+        }
+
+        eatApple(apple) {
+            if (this.checkApple(apple)) {
+                this.weight++;
+                apple.decrease();
+            }
+        }
+
     }
-    document.write(a)
+
+    // kich bản
+    let tao = new Apple();
+    let adam = new Human("Adam", "NAM", 50);
+    let eva = new Human("Eva", "NU", 40);
+    adam.say("Eva em ăn táo đi");
+    eva.say("Cũng được");
+    eva.eatApple(tao);
+    eva.say("Em ăn một miếng thôi, anh ăn đi");
+    adam.eatApple(tao);
+    adam.eatApple(tao);
+    adam.eatApple(tao);
+    adam.eatApple(tao);
+    adam.eatApple(tao);
+    adam.eatApple(tao);
+    adam.eatApple(tao);
+    adam.eatApple(tao);
+    adam.eatApple(tao);
+    adam.eatApple(tao);
+    console.log("Trọng lượng adam: " + adam.weight);
+    console.log("Trọng lượng eva: " + eva.weight);
+    console.log("Trọng lượng táo: " + tao.getWeight());
+
+    Ví dụ:
+        Với inputArray = [1, 2, 2, 1], thì kết quả checkEqualFrequency(inputArray) = true
+    Số 1 và số 2 đều có tần số xuất hiện là 2
+    Với inputArray = [1, 2, 2, 3, 1, 3, 1, 3], thì kết quả checkEqualFrequency(inputArray) = false.
+        Số 1 có tần số xuất hiện là 3, khác vs số 2 và số 3 có tần số xuất hiện là 2 .
+
+        [execution time limit] 4 seconds (js)
+
+        [input] array.integer arr
+
+    Mảng số nguyên 1 chiều
+
+        [output] boolean
+
+    Trả về true/false
+
+        [JavaScript] Syntax Tips
+
+    // Prints help message to
 </script>
 </body>
 </html>

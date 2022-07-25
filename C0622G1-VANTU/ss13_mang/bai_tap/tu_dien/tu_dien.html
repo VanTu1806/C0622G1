@@ -5,12 +5,12 @@
     <title></title>
 </head>
 <body>
-<p>Nhập từ: <input type="text" id="nhapvao"> <input type="button" value="Tra từ" onclick="clickme()"></p>
+<p>Nhập từ: <input type="text" id="nhapvao"> <input type="button" value="Tra từ" onclick="find()"></p>
 <p id="result2"></p>
 <script>
-    function clickme() {
+    function find() {
         let tiengViet = ["màu xanh", "màu đỏ", "màu cam", "màu tím", "màu hồng", "màu đen", "màu trắng"];
-        let tiengAnh = ['blue', 'red', 'orange', 'purple', 'pink', 'black', 'white'];
+        let tiengAnh = ['blue', 'red', 'orange', 'purple', 'pink', 'black', 'white']
         let nhapVao = document.getElementById("nhapvao").value;
         let index = 0;
         let result = '';

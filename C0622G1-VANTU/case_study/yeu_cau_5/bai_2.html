@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2: Viết hàm liệt kê các số nguyên tố trong mảng 2 chiều, đếm các số nguyên tố có trong mảng đó.</title>
+</head>
+<body>
+<script>
+    let mang2Chieu = [
+        [30, 5, 8],
+        [5, 15, 7],
+        [12, 4, 6]
+    ]
+    demSoNguyenTo(mang2Chieu);
+
+    function demSoNguyenTo(arr) {
+        let count = 0;
+        let danhSachSoNguyenTo = [];
+        for (let i = 0; i < arr.length; i++) {
+            for (let j = 0; j < arr[i].length; j++) {
+                let check = true;
+                for (let k = 2; k < arr[i][j]; k++) {
+                    if (arr[i][j] % k === 0) {
+                        check = false
+                    }
+                }
+                if (check) {
+                    count++;
+                    danhSachSoNguyenTo.push(arr[i][j]);
+                }
+            }
+        }
+        document.write('Mảng đã cho có ' + danhSachSoNguyenTo.length + ' số nguyên tố: ' + danhSachSoNguyenTo);
+    }
+</script>
+</body>
+</html>

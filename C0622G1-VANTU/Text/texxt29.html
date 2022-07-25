@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // let nhapKyTu = prompt("Nhập ký tự");
+    // function kyTu(nhapKyTu) {
+    //     let arr = [];
+    //     for (let i = 0; i < nhapKyTu.length; i++) {
+    //         if (!arr.includes(nhapKyTu[i])) {
+    //             arr.push(nhapKyTu[i]);
+    //         }
+    //     }
+    //     return arr.length;
+    // }
+    // alert("Số ký tự khác nhau: " + kyTu(nhapKyTu));
+    let nhapKyTu1 = prompt("Nhập ký tự 1");
+    let nhapKyTu2 = prompt("nhập ký tự 2");
+    function kyTu1(nhapKyTu1) {
+        let arr1 = [];
+        for (let i = 0; i < nhapKyTu1.length; i++) {
+            if (arr1.includes(nhapKyTu1[i])) {
+                arr1.push(nhapKyTu1[i]);
+            }
+        }
+        return arr1.length;
+    }
+        for(let j = 0; j < nhapKyTu2.length; j++){
+            if (arr2.includes(nhapKyTu2[j])){
+                arr2.push(nhapKyTu2[j]);
+            }
+        }
+        return arr2.length;
+    }
+    alert(kyTu1(nhapKyTu1));
+
+</script>
+</body>
+</html>

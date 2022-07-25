@@ -2,41 +2,58 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>Title</title>
 </head>
 <body>
-<h1>Chơi cờ ca rô </h1>
-<p id="caro"/>
-<input value="1234" onclick="Kich()">
+<input type="text" id="product" placeholder="Nhập tên sản phẩm">
+<input type="button" value="Add Product" onclick="addNewProduct()">
+<span>Số lượng : </span>
+<span id="soLuong"></span>
+<p id="display"></p>
 <script>
-    let b = document.getElementById("caro");
-    let x = [];
-    let data = "";
-    for (i = 0; i < 8; i++) {
-        x[i] = new Array(0, 0, 0, 0, 0, 0, 0, 0);
-    }
-    for (i = 0; i < 8; i++) {
-        data += "<br/>";
-        for (j = 0; j < 8; j++) {
-            data += x[i][j] + "&nbsp&nbsp";
-        }
-    }
-        data += "<br/><br/><input type='button' value='Kich' onclick='Kich()'>"
-        b.innerHTML = data;
+    let productList = ["sam sung", "nokia", "iphone"];
+    display(productList);
 
-    function Kich() {
-        let positionX = prompt("X: ");
-        let positionY = prompt("Y: ");
-        data = "";
-        x[positionX][positionY] = "X";
-        for (let i = 0; i < 8; i++) {
-            data += "<br/>";
-            for (let j = 0; j < 8; j++) {
-                data += x[i][j] + "&nbsp;&nbsp;&nbsp;&nbsp;";
-            }
+    function addNewProduct() {
+        let newProduct = document.getElementById("product").value;
+        productList.push(newProduct);
+        display(productList);
+    }
+
+    function edit(index) {
+        let editProduct = prompt("Nhập lại tên mới ", productList[index]);
+        productList[index] = editProduct;
+        display(productList);
+    }
+
+    function deleteProduct(index) {
+        let conf = confirm("Bạn có muốn xóa sản phầm : " + productList[index] + " không?");
+        if (conf) {
+            productList.splice(index, 1);
         }
-        data += "<br/><br/><input type='button' value='Kich' onclick='Kich()'>"
-        b.innerHTML = "<hr/>" + data;
+        display(productList);
+    }
+
+    function display(list) {
+        let tableString = '<table border="1">\n' +
+            '    <tr>\n' +
+            '        <th>STT</th>\n' +
+            '        <th>Name</th>\n' +
+            '        <th>Edit</th>\n' +
+            '        <th>Delete</th>\n' +
+            '    </tr>';
+        for (let i = 0; i < list.length; i++) {
+            tableString += '<tr>\n' +
+                '         <td>' + (i + 1) + '</td>\n' +
+                '         <td>' + list[i] + '</td>\n' +
+                '         <td><input type="button" onclick="edit(' + i + ')" value="Edit"></td>\n' +
+                '         <td><input type="button" onclick="deleteProduct(' + i + ')" value="Delete"></td>\n' +
+                '\n' +
+                '    </tr>';
+        }
+        tableString += '</table>';
+        document.getElementById("display").innerHTML = tableString;
+        document.getElementById("soLuong").innerHTML = list.length;
     }
 </script>
 </body>
